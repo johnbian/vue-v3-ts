@@ -3,7 +3,6 @@
  */
 const state = {
   num: 0,
-  excludePage: [],
 };
 
 const actions = {
@@ -12,11 +11,7 @@ const actions = {
   },
 
   del(context: any) {
-    context.commit('del');
-  },
-
-  setExcludePageAct({ commit }: any, excludePage: any) {
-    commit('setExcludePage', excludePage);
+    setTimeout(() => context.commit('del'), 0);
   },
 };
 
@@ -27,10 +22,6 @@ const mutations = {
 
   del(states: any) {
     states.num --;
-  },
-
-  setExcludePage(states: any, excludePage: any) {
-    states.excludePage = excludePage;
   },
 };
 

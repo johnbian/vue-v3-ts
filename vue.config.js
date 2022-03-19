@@ -1,6 +1,6 @@
 // vue.config.js
 const tsImportPluginFactory = require('ts-import-plugin');
-const proxy = require('./src/assets/proxy.ts');
+const proxy = require('./src/config/proxy.ts');
 
 module.exports = {
   publicPath: process.env.VUE_APP_PUBLIC_PATH,
@@ -36,7 +36,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8099,
+    port: 8100,
     proxy: proxy[process.env.VUE_APP_ENV],
     headers: {
       'Access-Control-Allow-Origin': '*',

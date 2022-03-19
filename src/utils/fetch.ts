@@ -1,6 +1,6 @@
 import * as axios from 'axios';
-import commonConfig from '@/assets/config';
-import store from '@/store';
+import commonConfig from '@/config/common';
+import { store } from '../store';
 
 /**
  * @author john.bian
@@ -14,9 +14,9 @@ class Fetch {
    * get 请求
    * @param url 请求地址
    */
-  public async get(url: string): Promise<any> {
+  public async get(url: string, params?: any): Promise<any> {
     try {
-      const ret = await this.ax.get(encodeURI(url));
+      const ret = await this.ax.get(encodeURI(url), {params});
       return this.handleResponse(ret);
     } catch (err) {
       return this.commonErrorHandle(err);
@@ -53,7 +53,7 @@ const instance = axios.default.create({
 // 请求头拦截 处理
 instance.interceptors.request.use((config): any => {
   config.headers = {
-    'x-ac-token-ticket': (store.state as any).user.userInfo.token,
+    'x-ac-token-ticket': store.state.user.userInfo.token,
   };
   store.dispatch('num/add');
   return config;

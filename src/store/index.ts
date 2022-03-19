@@ -1,10 +1,12 @@
-import Vuex from 'vuex';
+import { createStore, Store, useStore as baseUseStore } from 'vuex';
+import { InjectionKey } from 'vue';
 import num from './modules/num';
 import user from './modules/user';
 import createPersistedState from 'vuex-persistedstate';
 
+export const key: InjectionKey<Store<any>> = Symbol()
 
-export default new Vuex.Store({
+export const store = createStore({
   modules: {
     num,
     user,
@@ -18,3 +20,7 @@ export default new Vuex.Store({
     },
   })],
 });
+
+export function useStore () {
+  return baseUseStore(key)
+}

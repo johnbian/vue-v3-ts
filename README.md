@@ -4,7 +4,7 @@ This project was bootstrapped with [vue-cli](https://github.com/vuejs/vue-cli)
 适合想用`vue，ts以及class-component`写法开发手机端h5的项目基于`vue3`。状态管理`vuex`。路由是`vue-router`加入了`keep-alive`来做缓存。
 
 ### class-component写法
-这里用的是[vue-property-decorato](https://github.com/kaorun343/vue-property-decorator)。可参考[vue-property-decorato用法](https://www.jianshu.com/p/d8ed3aa76e9b)
+这里用的是[vue-property-decorato](https://github.com/kaorun343/vue-property-decorator)。可参考[vue-property-decorato用法](https://www.jianshu.com/p/d8ed3aa76e9b)，vue3 暂不支持。
 
 ### 解决前进刷新后退不刷新问题
 利用`keep-alive`解决[多路由，前进刷新，后退不刷新](https://segmentfault.com/a/1190000012083511)

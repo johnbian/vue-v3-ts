@@ -1,7 +1,7 @@
 {
-  "name": "<%= projectName %>",
+  "name": "test",
   "version": "0.1.0",
-  "description": "<%= projectName %>",
+  "description": "test",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode dev",

@@ -1,4 +1,4 @@
-import fetch from '@/assets/fetch';
+import fetch from '@/utils/fetch';
 /**
  * @author johnbian
  * @description 接口处理
