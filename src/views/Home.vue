@@ -20,6 +20,7 @@ export default class Home extends Vue {
   public created(): void {
     api.nameSet();
     this.$store.dispatch('user/setUserInfo', {token: '11ws22s33ssdass'});
+    console.log('test webpack');
   }
 }
 </script>
